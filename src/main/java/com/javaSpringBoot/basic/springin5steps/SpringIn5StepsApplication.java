@@ -2,16 +2,25 @@ package com.javaSpringBoot.basic.springin5steps;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
 
 @SpringBootApplication
 public class SpringIn5StepsApplication {
+	
+	//what are the beans? using @component to show beans
+	//What are the dependencies of a bean? @Autowird to show beans dependencies
+	//Where to search for beans?
 
 	public static void main(String[] args) {
-		BinarySearchImpl binarySearch = new BinarySearchImpl(new QuickSortAlgorithm());
-		int result = binarySearch.binarySearch(new int[] {1,4,5}, 3);
-		System.out.println(result);
+//		BinarySearchImpl binarySearch = new BinarySearchImpl(new QuickSortAlgorithm());
 		
-//		SpringApplication.run(SpringIn5StepsApplication.class, args);
+		ApplicationContext applicationContext = SpringApplication.run(SpringIn5StepsApplication.class, args);
+		
+		BinarySearchImpl binarySearch = applicationContext.getBean(BinarySearchImpl.class);
+		
+		int result = binarySearch.binarySearch(new int[] {1,4,5}, 3);
+		
+		System.out.println(result);
 	}
 
 }
