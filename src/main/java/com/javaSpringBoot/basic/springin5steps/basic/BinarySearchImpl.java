@@ -1,4 +1,4 @@
-package com.javaSpringBoot.basic.springin5steps;
+package com.javaSpringBoot.basic.springin5steps.basic;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
