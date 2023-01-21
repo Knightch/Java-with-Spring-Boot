@@ -6,6 +6,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Qualifier("quick")
+@Primary
 public class QuickSortAlgorithm implements SortAlgorithm{
 	public int[] sort(int[] numbers) {
 		// Logic for Quick Sort

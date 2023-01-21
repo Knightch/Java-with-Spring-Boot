@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 public class BinarySearchImpl {
 	
 	@Autowired
-	@Qualifier("quick")
+	@Qualifier("bubble")
 	private SortAlgorithm sortAlgorithm;
 	
 	public int binarySearch(int[] numbers, int numberToSearchFor) {
